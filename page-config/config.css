@@ -1,0 +1,223 @@
+/* Estilos específicos para a página de configurações */
+
+/* Perfil de usuário no topo */
+.settings-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-info .name {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.profile-info .role {
+    color: var(--gray-500);
+    font-size: 0.85rem;
+}
+
+.settings-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+.settings-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.settings-btn:hover {
+    background-color: var(--secondary);
+}
+
+/* Divider */
+.settings-divider {
+    height: 1px;
+    background-color: var(--gray-200);
+    margin: 1rem 0;
+    width: 100%;
+}
+
+/* Seções de configurações */
+.settings-section {
+    margin-bottom: 1rem;
+}
+
+.settings-section h3 {
+    font-size: 1rem;
+    color: var(--gray-700);
+    margin-bottom: 0.8rem;
+}
+
+/* Items de configurações */
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.settings-item:last-child {
+    border-bottom: none;
+}
+
+.settings-label {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.settings-value {
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    max-width: 50%;
+    text-align: right;
+    margin-right: 0.5rem;
+}
+
+.settings-edit-btn, .settings-action-btn {
+    background-color: var(--gray-100);
+    border: none;
+    border-radius: 5px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.settings-edit-btn:hover, .settings-action-btn:hover {
+    background-color: var(--gray-200);
+}
+
+/* Toggle switches */
+.settings-toggle-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.settings-toggle-item:last-child {
+    border-bottom: none;
+}
+
+.settings-toggle-label {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.settings-toggle-description {
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    margin-top: 0.2rem;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--gray-300);
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: var(--primary);
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(24px);
+}
+
+/* Zona de perigo */
+.danger-zone .card-header {
+    border-bottom-color: var(--danger);
+}
+
+.danger-zone .card-header h2 {
+    color: var(--danger);
+}
+
+.danger-text {
+    color: var(--danger);
+}
+
+.settings-danger-btn {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--danger);
+    border: 1px solid var(--danger);
+    border-radius: 5px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.settings-danger-btn:hover {
+    background-color: var(--danger);
+    color: white;
+}
+
+/* Footer */
+.settings-footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--gray-500);
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
