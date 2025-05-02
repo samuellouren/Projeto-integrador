@@ -1,0 +1,114 @@
+/* Estilos específicos para a página de vagas */
+
+.job-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--primary);
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.job-title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--dark);
+}
+
+.job-department {
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    background-color: var(--gray-100);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.job-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.job-progress {
+    margin: 1rem 0;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--gray-600);
+    margin-bottom: 0.3rem;
+}
+
+.progress-bar {
+    height: 6px;
+    background-color: var(--gray-200);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--primary);
+}
+
+.job-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+.status-active {
+    background-color: rgba(74, 222, 128, 0.1);
+    color: var(--success);
+}
+
+.status-paused {
+    background-color: rgba(251, 191, 36, 0.1);
+    color: var(--warning);
+}
+
+.status-closed {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--danger);
+}
+
+.recent-jobs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.recent-job-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    border-radius: 6px;
+    background-color: var(--gray-100);
+}
+
+.recent-job-info {
+    flex: 1;
+}
+
+.recent-job-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+
+.recent-job-department {
+    font-size: 0.8rem;
+    color: var(--gray-500);
+}

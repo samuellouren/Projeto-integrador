@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../Login/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <div class="logo">
+                Talent<span>Match</span>
+            </div>
+            <h1>Crie sua conta</h1>
+            <p>Preencha os dados abaixo para se cadastrar</p>
+        </div>
+        
+        <div class="error-message" id="error-message" style="display: none; background-color: rgba(239, 68, 68, 0.1); color: var(--danger); padding: 0.8rem; border-radius: 8px; margin-bottom: 1.5rem; font-size: 0.9rem; text-align: center;">
+            Por favor, preencha todos os campos corretamente.
+        </div>
+        
+        <form id="registerForm" action="confirmacao.html" method="post">
+            <div class="form-group">
+                <label for="nome">Nome completo</label>
+                <div class="input-with-icon">
+                    <i class="icon fas fa-user"></i>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <div class="input-with-icon">
+                    <i class="icon fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Seu email" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <div class="input-with-icon">
+                    <i class="icon fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Sua senha" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirm-password">Confirmar senha</label>
+                <div class="input-with-icon">
+                    <i class="icon fas fa-lock"></i>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme sua senha" required>
+                </div>
+            </div>
+            
+            <div class="remember-forgot">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Concordo com os <a href="#">Termos de Uso</a></label>
+                </div>
+            </div>
+            
+            <!-- Aqui precisa de um javascript que redirecione o caba pra página de login eeeeee que salve os dados cadastrados com a API -->
+            <button type="submit" class="btn" id="register-btn">Cadastrar</button>
+        </form>
+        
+        <div class="signup-link">
+            Já tem uma conta? <a href="../Login/index.html">Faça login</a>
+        </div>
+    </div>
+</body>
+</html>

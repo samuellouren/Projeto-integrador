@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TalentMatch Mobile | Recrutamento Inteligente</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Talent<span>Match</span></div>
+                <div class="header-actions">
+                    <div style="position: relative;">
+                        📬
+                        <span class="notification-badge">3</span>
+                    </div>
+                    <div class="avatar">JD</div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Dashboard -->
+        <div id="dashboard" class="tab-content active">
+            <div class="page-header">
+                <h1>Dashboard</h1>
+            </div>
+            
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <h3>CANDIDATURAS</h3>
+                    <div class="stat-value">347</div>
+                    <div class="stat-change positive">+12%</div>
+                </div>
+                <div class="stat-card">
+                    <h3>VAGAS ABERTAS</h3>
+                    <div class="stat-value">14</div>
+                    <div class="stat-change positive">+3 vagas</div>
+                </div>
+                <div class="stat-card">
+                    <h3>TEMPO MÉDIO</h3>
+                    <div class="stat-value">12 dias</div>
+                    <div class="stat-change positive">-40%</div>
+                </div>
+                <div class="stat-card">
+                    <h3>QUALIFICADOS</h3>
+                    <div class="stat-value">86%</div>
+                    <div class="stat-change positive">+8%</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2>Candidatos Recentes</h2>
+                    <div class="filters">
+                        <select class="filter-select">
+                            <option>Todas as vagas</option>
+                            <option>Desenvolvedor</option>
+                            <option>Product Manager</option>
+                            <option>UX Designer</option>
+                        </select>
+                        <select class="filter-select">
+                            <option>Todos os status</option>
+                            <option>Novo</option>
+                            <option>Triagem</option>
+                            <option>Entrevista</option>
+                            <option>Contratado</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Pesquisar candidatos...">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    
+                    <div class="candidate-card">
+                        <div class="candidate-header">
+                            <div class="avatar">PM</div>
+                            <div class="candidate-info">
+                                <div class="name">Paulo Mendes</div>
+                                <div class="email">paulo@email.com</div>
+                            </div>
+                        </div>
+                        <div class="candidate-details">
+                            <div class="detail-item">
+                                <div class="label">Vaga</div>
+                                <div>Desenvolvedor Full-stack</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Status</div>
+                                <span class="status status-interview">Entrevista</span>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Data</div>
+                                <div>Hoje, 14:30</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Compatibilidade</div>
+                                <div>95%</div>
+                                <div class="skills-match-bar">
+                                    <div class="skills-match-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="candidate-actions">
+                            <button class="action-btn">👁️</button>
+                            <button class="action-btn">📝</button>
+                            <button class="action-btn">✉️</button>
+                        </div>
+                    </div>
+                    
+                    <div class="candidate-card">
+                        <div class="candidate-header">
+                            <div class="avatar">CR</div>
+                            <div class="candidate-info">
+                                <div class="name">Carla Ribeiro</div>
+                                <div class="email">carla@email.com</div>
+                            </div>
+                        </div>
+                        <div class="candidate-details">
+                            <div class="detail-item">
+                                <div class="label">Vaga</div>
+                                <div>Product Manager</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Status</div>
+                                <span class="status status-screening">Triagem</span>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Data</div>
+                                <div>Ontem, 10:15</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Compatibilidade</div>
+                                <div>88%</div>
+                                <div class="skills-match-bar">
+                                    <div class="skills-match-progress" style="width: 88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="candidate-actions">
+                            <button class="action-btn">👁️</button>
+                            <button class="action-btn">📝</button>
+                            <button class="action-btn">✉️</button>
+                        </div>
+                    </div>
+                    
+                    <div class="candidate-card">
+                        <div class="candidate-header">
+                            <div class="avatar">LS</div>
+                            <div class="candidate-info">
+                                <div class="name">Lucas Silva</div>
+                                <div class="email">lucas@email.com</div>
+                            </div>
+                        </div>
+                        <div class="candidate-details">
+                            <div class="detail-item">
+                                <div class="label">Vaga</div>
+                                <div>UX Designer</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Status</div>
+                                <span class="status status-new">Novo</span>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Data</div>
+                                <div>25 Abr, 2025</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Compatibilidade</div>
+                                <div>78%</div>
+                                <div class="skills-match-bar">
+                                    <div class="skills-match-progress" style="width: 78%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="candidate-actions">
+                            <button class="action-btn">👁️</button>
+                            <button class="action-btn">📝</button>
+                            <button class="action-btn">✉️</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Outras páginas ficariam aqui, mas estão ocultas -->
+    </main>
+    
+    <button class="floating-action-btn">+</button>
+    
+    <div class="bottom-nav">
+        <a href="#" class="active" data-tab="dashboard">
+            📊<br>Dashboard
+        </a>
+        <a href="../candidatos/candidatos.html" data-tab="candidates">
+            👥<br>Candidatos
+        </a>
+        <a href="../vagas/vagas.html" data-tab="jobs">
+            💼<br>Vagas
+        </a>
+        <a href="../analises/analises.html" data-tab="analytics">
+            📈<br>Análises
+        </a>
+        <a href="../configuracoes/configuracoes.html" data-tab="settings">
+            ⚙️<br>Config
+        </a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

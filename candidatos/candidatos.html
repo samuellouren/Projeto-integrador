@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalentMatch Mobile | Candidatos</title>
+    <link rel="stylesheet" href="candidatos.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Talent<span>Match</span></div>
+                <div class="header-actions">
+                    <div style="position: relative;">
+                        📬
+                        <span class="notification-badge">3</span>
+                    </div>
+                    <div class="avatar">JD</div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div id="candidates" class="tab-content active">
+            <div class="page-header">
+                <h1>Candidatos</h1>
+                <button class="btn">Exportar</button>
+            </div>
+
+            <div class="search-container">
+                <input type="text" class="search-input"
+                    placeholder="Buscar candidatos por nome, habilidades ou vaga...">
+                <span class="search-icon">🔍</span>
+            </div>
+
+            <div class="filters">
+                <select class="filter-select">
+                    <option value="">Todas as vagas</option>
+                    <option value="dev">Desenvolvedor</option>
+                    <option value="product">Product Manager</option>
+                    <option value="design">UX Designer</option>
+                    <option value="marketing">Marketing</option>
+                </select>
+
+                <select class="filter-select">
+                    <option value="">Todos os status</option>
+                    <option value="new">Novo</option>
+                    <option value="screening">Triagem</option>
+                    <option value="interview">Entrevista</option>
+                    <option value="hired">Contratado</option>
+                    <option value="rejected">Rejeitado</option>
+                </select>
+
+                <select class="filter-select">
+                    <option value="">Todas as habilidades</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="react">React</option>
+                    <option value="nodejs">Node.js</option>
+                    <option value="python">Python</option>
+                    <option value="ux">UX Design</option>
+                </select>
+            </div>
+
+            <div class="applied-filters">
+                <div class="filter-tag">
+                    Desenvolvedor <span class="remove">✕</span>
+                </div>
+                <div class="filter-tag">
+                    JavaScript <span class="remove">✕</span>
+                </div>
+            </div>
+
+            <div class="select-container">
+                <select id="sortCandidates">
+                    <option value="recent">Mais recentes primeiro</option>
+                    <option value="match">Maior compatibilidade primeiro</option>
+                    <option value="name">Nome (A-Z)</option>
+                    <option value="status">Status</option>
+                </select>
+            </div>
+
+            <div class="candidate-list">
+                <!-- Candidato 1 -->
+                <div class="candidate-card interview">
+                    <div class="bookmark">⭐</div>
+                    <div class="candidate-header">
+                        <div class="avatar">PM</div>
+                        <div class="candidate-info">
+                            <div class="name">Paulo Mendes</div>
+                            <div class="email">paulo@email.com</div>
+                        </div>
+                    </div>
+
+                    <div class="candidate-details">
+                        <div class="detail-item">
+                            <div class="label">Vaga</div>
+                            <div class="value">Desenvolvedor Full-stack</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Status</div>
+                            <span class="status status-interview">Entrevista</span>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Compatibilidade</div>
+                            <div class="value">95%</div>
+                            <div class="skills-match-bar">
+                                <div class="skills-match-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Candidatura</div>
+                            <div class="value">18 Abr, 2025</div>
+                        </div>
+                    </div>
+
+                    <div class="label">Habilidades</div>
+                    <div class="tag-list">
+                        <span class="skill-tag expert">JavaScript</span>
+                        <span class="skill-tag expert">React</span>
+                        <span class="skill-tag intermediate">Node.js</span>
+                        <span class="skill-tag intermediate">Python</span>
+                    </div>
+
+                    <div class="candidate-actions">
+                        <button class="action-btn primary">Agendar Entrevista</button>
+                        <button class="action-btn">Ver Currículo</button>
+                        <button class="action-btn">Enviar Mensagem</button>
+                    </div>
+                </div>
+
+                <!-- Candidato 2 -->
+                <div class="candidate-card screening">
+                    <div class="bookmark active">⭐</div>
+                    <div class="candidate-header">
+                        <div class="avatar">CR</div>
+                        <div class="candidate-info">
+                            <div class="name">Carla Ribeiro</div>
+                            <div class="email">carla@email.com</div>
+                        </div>
+                    </div>
+
+                    <div class="candidate-details">
+                        <div class="detail-item">
+                            <div class="label">Vaga</div>
+                            <div class="value">Product Manager</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Status</div>
+                            <span class="status status-screening">Triagem</span>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Compatibilidade</div>
+                            <div class="value">88%</div>
+                            <div class="skills-match-bar">
+                                <div class="skills-match-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Candidatura</div>
+                            <div class="value">20 Abr, 2025</div>
+                        </div>
+                    </div>
+
+                    <div class="label">Habilidades</div>
+                    <div class="tag-list">
+                        <span class="skill-tag expert">Product Management</span>
+                        <span class="skill-tag expert">Scrum</span>
+                        <span class="skill-tag intermediate">UX Design</span>
+                        <span class="skill-tag intermediate">Marketing</span>
+                    </div>
+
+                    <div class="candidate-actions">
+                        <button class="action-btn primary">Avançar para Entrevista</button>
+                        <button class="action-btn">Ver Currículo</button>
+                        <button class="action-btn">Enviar Mensagem</button>
+                    </div>
+                </div>
+
+                <!-- Candidato 3 -->
+                <div class="candidate-card new">
+                    <div class="bookmark">⭐</div>
+                    <div class="candidate-header">
+                        <div class="avatar">LS</div>
+                        <div class="candidate-info">
+                            <div class="name">Lucas Silva</div>
+                            <div class="email">lucas@email.com</div>
+                        </div>
+                    </div>
+
+                    <div class="candidate-details">
+                        <div class="detail-item">
+                            <div class="label">Vaga</div>
+                            <div class="value">UX Designer</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Status</div>
+                            <span class="status status-new">Novo</span>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Compatibilidade</div>
+                            <div class="value">78%</div>
+                            <div class="skills-match-bar">
+                                <div class="skills-match-progress" style="width: 78%"></div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Candidatura</div>
+                            <div class="value">25 Abr, 2025</div>
+                        </div>
+                    </div>
+
+                    <div class="label">Habilidades</div>
+                    <div class="tag-list">
+                        <span class="skill-tag expert">UI Design</span>
+                        <span class="skill-tag expert">Figma</span>
+                        <span class="skill-tag intermediate">HTML/CSS</span>
+                        <span class="skill-tag beginner">JavaScript</span>
+                    </div>
+
+                    <div class="candidate-actions">
+                        <button class="action-btn primary">Iniciar Triagem</button>
+                        <button class="action-btn">Ver Currículo</button>
+                        <button class="action-btn">Enviar Mensagem</button>
+                    </div>
+                </div>
+
+                <!-- Candidato 4 -->
+                <div class="candidate-card hired">
+                    <div class="bookmark">⭐</div>
+                    <div class="candidate-header">
+                        <div class="avatar">AM</div>
+                        <div class="candidate-info">
+                            <div class="name">Ana Moreira</div>
+                            <div class="email">ana@email.com</div>
+                        </div>
+                    </div>
+
+                    <div class="candidate-details">
+                        <div class="detail-item">
+                            <div class="label">Vaga</div>
+                            <div class="value">Desenvolvedor Full-stack</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Status</div>
+                            <span class="status status-hired">Contratado</span>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Compatibilidade</div>
+                            <div class="value">92%</div>
+                            <div class="skills-match-bar">
+                                <div class="skills-match-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Candidatura</div>
+                            <div class="value">15 Abr, 2025</div>
+                        </div>
+                    </div>
+
+                    <div class="label">Habilidades</div>
+                    <div class="tag-list">
+                        <span class="skill-tag expert">JavaScript</span>
+                        <span class="skill-tag expert">React</span>
+                        <span class="skill-tag expert">Node.js</span>
+                        <span class="skill-tag intermediate">TypeScript</span>
+                    </div>
+
+                    <div class="candidate-actions">
+                        <button class="action-btn primary">Ver Detalhes</button>
+                        <button class="action-btn">Ver Currículo</button>
+                        <button class="action-btn">Enviar Mensagem</button>
+                    </div>
+                </div>
+
+                <!-- Candidato 5 -->
+                <div class="candidate-card rejected">
+                    <div class="bookmark">⭐</div>
+                    <div class="candidate-header">
+                        <div class="avatar">RO</div>
+                        <div class="candidate-info">
+                            <div class="name">Rafael Oliveira</div>
+                            <div class="email">rafael@email.com</div>
+                        </div>
+                    </div>
+
+                    <div class="candidate-details">
+                        <div class="detail-item">
+                            <div class="label">Vaga</div>
+                            <div class="value">Desenvolvedor Back-end</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Status</div>
+                            <span class="status status-rejected">Rejeitado</span>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Compatibilidade</div>
+                            <div class="value">65%</div>
+                            <div class="skills-match-bar">
+                                <div class="skills-match-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Candidatura</div>
+                            <div class="value">12 Abr, 2025</div>
+                        </div>
+                    </div>
+
+                    <div class="label">Habilidades</div>
+                    <div class="tag-list">
+                        <span class="skill-tag intermediate">Java</span>
+                        <span class="skill-tag intermediate">Spring Boot</span>
+                        <span class="skill-tag beginner">Python</span>
+                        <span class="skill-tag beginner">MySQL</span>
+                    </div>
+
+                    <div class="candidate-actions">
+                        <button class="action-btn primary">Ver Detalhes</button>
+                        <button class="action-btn">Ver Currículo</button>
+                        <button class="action-btn">Enviar Mensagem</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="pagination-btn">←</button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">→</button>
+            </div>
+        </div>
+    </main>
+
+    <button class="floating-action-btn">+</button>
+
+    <div class="bottom-nav">
+        <a href="../Dashboard/index.html" data-tab="dashboard">
+            📊<br>Dashboard
+        </a>
+        <a href="../candidatos/candidatos.html" data-tab="candidates" class="active">
+            👥<br>Candidatos
+        </a>
+        <a href="../vagas/vagas.html" data-tab="jobs">
+            💼<br>Vagas
+        </a>
+        <a href="../analise/analise.html" data-tab="analytics">
+            📈<br>Análises
+        </a>
+        <a href="../page-config/config.html" data-tab="settings">
+            ⚙️<br>Configurações
+        </a>
+    </div>
+
+    <script src="candidatos.js"></script>
+</body>
+</html>
