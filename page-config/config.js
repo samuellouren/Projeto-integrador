@@ -514,7 +514,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     targetUrl = '../vagas/vagas.html';
                     break;
                 case 'analytics':
-                    targetUrl = '../analise/analise.html';
+                    targetUrl = '../analises/analise.html';
                     break;
                 case 'settings':
                     targetUrl = '../page-config/config.html';
