@@ -85,7 +85,7 @@ function navigateToPage(targetTab) {
             targetUrl = '../analises/analise.html';
             break;
         case 'settings':
-            targetUrl = '../page-config/config.html';
+            targetUrl = '../configuracoes/config.html';
             break;
         default:
             // Se nenhum caso corresponder, permanece na página atual
