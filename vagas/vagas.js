@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             switch(targetTab) {
                 case 'dashboard':
-                    targetUrl = '../Dashboard/index.html';
+                    targetUrl = '../Dashboard/novo-dasbord.html';
                     break;
                 case 'candidates':
                     targetUrl = '../candidatos/candidatos.html';
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     targetUrl = '../vagas/vagas.html';
                     break;
                 case 'analytics':
-                    targetUrl = '../analise/analise.html';
+                    targetUrl = '../analises/analise.html';
                     break;
                 case 'settings':
                     targetUrl = '../page-config/config.html';
