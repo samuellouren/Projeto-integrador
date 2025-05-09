@@ -1,0 +1,4 @@
+Samuel (Líder): Dashboard. Figma (Protótipo de baixa fidelidade), Js das páginas (em andamento...)
+Carlos (Vice-líder): Candidatos, Vagas, Analises e config. Figma (baixa fidelidade). Api login
+Fernando: Correções das páginas de js. Login, Cadastro.
+Leonardo: 
