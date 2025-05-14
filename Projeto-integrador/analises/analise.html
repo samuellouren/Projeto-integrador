@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="analise.css">
+    <title>TalentMatch | Análises</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Talent<span>Match</span></div>
+                <div class="header-actions">
+                    <div style="position: relative;">
+                        📬
+                        <span class="notification-badge">3</span>
+                    </div>
+                    <div class="avatar">JD</div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div id="analytics" class="tab-content active">
+            <div class="page-header">
+                <h1>Análises</h1>
+                <select class="filter-select">
+                    <option>Últimos 30 dias</option>
+                    <option>Últimos 90 dias</option>
+                    <option>Este ano</option>
+                    <option>Todo período</option>
+                </select>
+            </div>
+
+            <div class="key-metrics">
+                <div class="metric-card">
+                    <div class="metric-title">Taxa de Conversão</div>
+                    <div class="metric-value">24.8%</div>
+                    <div class="metric-comparison">Candidatos Contratados / Entrevistados</div>
+                    <div class="metric-trend trend-up">
+                        ↑ 3.5% vs. período anterior
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Tempo até Contratação</div>
+                    <div class="metric-value">18 dias</div>
+                    <div class="metric-comparison">Média desde publicação da vaga</div>
+                    <div class="metric-trend trend-down">
+                        ↓ 5 dias vs. período anterior
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Custo por Contratação</div>
+                    <div class="metric-value">R$ 3.450</div>
+                    <div class="metric-comparison">Investimento total / Contratações</div>
+                    <div class="metric-trend trend-down">
+                        ↓ 12% vs. período anterior
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Candidaturas Qualificadas</div>
+                    <div class="metric-value">72%</div>
+                    <div class="metric-comparison">Candidatos com +70% compatibilidade</div>
+                    <div class="metric-trend trend-up">
+                        ↑ 8% vs. período anterior
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2>Performance de Recrutamento</h2>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <div class="chart-title">Candidaturas por Semana</div>
+                            <div class="chart-period">Últimos 30 dias</div>
+                        </div>
+                        <div class="chart-visual">
+                            <div class="bar-chart">
+                                <div class="bar" style="height: 30%;">
+                                    <span class="bar-value">32</span>
+                                    <span class="bar-label">Sem 1</span>
+                                </div>
+                                <div class="bar" style="height: 60%;">
+                                    <span class="bar-value">64</span>
+                                    <span class="bar-label">Sem 2</span>
+                                </div>
+                                <div class="bar" style="height: 80%;">
+                                    <span class="bar-value">86</span>
+                                    <span class="bar-label">Sem 3</span>
+                                </div>
+                                <div class="bar" style="height: 100%;">
+                                    <span class="bar-value">107</span>
+                                    <span class="bar-label">Sem 4</span>
+                                </div>
+                                <div class="bar" style="height: 90%;">
+                                    <span class="bar-value">96</span>
+                                    <span class="bar-label">Atual</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <div class="chart-title">Taxa de Conversão por Etapa</div>
+                            <div class="chart-period">Últimos 30 dias</div>
+                        </div>
+                        <div class="chart-visual">
+                            <div class="line-visual">
+                                <div class="line-segment" style="transform: rotate(5deg);"></div>
+                                <div class="line-segment" style="transform: rotate(-10deg);"></div>
+                                <div class="line-segment" style="transform: rotate(-15deg);"></div>
+                                <div class="line-segment" style="transform: rotate(20deg);"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-stats">
+                <div class="job-stats-header">
+                    <div class="job-stats-title">Status das Vagas</div>
+                    <div class="job-stats-period">Abril, 2025</div>
+                </div>
+
+                <div class="job-stats-grid">
+                    <div class="job-stat-card">
+                        <div class="job-stat-value">14</div>
+                        <div class="job-stat-label">Vagas Abertas</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill primary" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                    <div class="job-stat-card">
+                        <div class="job-stat-value">8</div>
+                        <div class="job-stat-label">Em Processo Final</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill secondary" style="width: 40%;"></div>
+                        </div>
+                    </div>
+                    <div class="job-stat-card">
+                        <div class="job-stat-value">7</div>
+                        <div class="job-stat-label">Concluídas</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill success" style="width: 30%;"></div>
+                        </div>
+                    </div>
+                    <div class="job-stat-card">
+                        <div class="job-stat-value">3</div>
+                        <div class="job-stat-label">Canceladas</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill warning" style="width: 15%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2>Principais Fontes de Candidatos</h2>
+                </div>
+                <div class="card-body">
+                    <div class="top-sources">
+                        <div class="source-item">
+                            <div class="source-name">
+                                <div class="source-icon">LI</div>
+                                LinkedIn
+                            </div>
+                            <div class="source-stats">
+                                <div class="source-count">156</div>
+                                <div class="source-percent">45%</div>
+                            </div>
+                        </div>
+                        <div class="source-item">
+                            <div class="source-name">
+                                <div class="source-icon">SP</div>
+                                Site Próprio
+                            </div>
+                            <div class="source-stats">
+                                <div class="source-count">98</div>
+                                <div class="source-percent">28%</div>
+                            </div>
+                        </div>
+                        <div class="source-item">
+                            <div class="source-name">
+                                <div class="source-icon">IN</div>
+                                Indicações
+                            </div>
+                            <div class="source-stats">
+                                <div class="source-count">54</div>
+                                <div class="source-percent">16%</div>
+                            </div>
+                        </div>
+                        <div class="source-item">
+                            <div class="source-name">
+                                <div class="source-icon">PV</div>
+                                Plataformas Vagas
+                            </div>
+                            <div class="source-stats">
+                                <div class="source-count">39</div>
+                                <div class="source-percent">11%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <button class="floating-action-btn">+</button>
+
+    <div class="bottom-nav">
+        <a href="../Dashboard/novo-dasbord.html" data-tab="dashboard">
+            📊<br>Dashboard
+        </a>
+        <a href="../candidatos/candidatos.html" data-tab="candidates">
+            👥<br>Candidatos
+        </a>
+        <a href="../vagas/vagas.html" data-tab="jobs">
+            💼<br>Vagas
+        </a>
+        <a href="../analises/analise.html" class="active" data-tab="analytics">
+            📈<br>Análises
+        </a>
+        <a href="../page-config/config.html" data-tab="settings">
+            ⚙️<br>Config
+        </a>
+    </div>
+    <script src="analise.js"></script>
+
+</body>
+
+</html>

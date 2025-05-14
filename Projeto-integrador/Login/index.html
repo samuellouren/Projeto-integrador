@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Login</title> 
+    <link rel="stylesheet" href="../Login/style.css"> 
+</head> 
+<body> 
+    <div class="login-container"> 
+        <div class="login-header"> 
+            <div class="logo"> 
+                Talent<span>Match</span> 
+            </div> 
+            <h1>Bem-vindo de volta</h1> 
+            <p>Entre com seus dados para acessar sua conta</p> 
+        </div> 
+        
+        <div class="error-message" id="error-message" style="display: none; background-color: rgba(239, 68, 68, 0.1); color: var(--danger); padding: 0.8rem; border-radius: 8px; margin-bottom: 1.5rem; font-size: 0.9rem; text-align: center;"> 
+            Por favor, insira um email e senha válidos. 
+        </div> 
+        
+        <form id="login-form">
+            <div class="form-group"> 
+                <label for="email">Email</label> 
+                <div class="input-with-icon"> 
+                    <i class="icon fas fa-envelope"></i> 
+                    <input type="email" id="email" name="email" placeholder="Seu email" required> 
+                </div> 
+            </div> 
+            
+            <div class="form-group"> 
+                <label for="password">Senha</label> 
+                <div class="input-with-icon"> 
+                    <i class="icon fas fa-lock"></i> 
+                    <input type="password" id="password" name="password" placeholder="Sua senha" required> 
+                </div> 
+            </div> 
+            
+            <div class="remember-forgot"> 
+                <div class="checkbox-container"> 
+                    <input type="checkbox" id="remember" name="remember"> 
+                    <label for="remember">Lembrar-me</label> 
+                </div> 
+            </div> 
+            
+            <button type="submit" class="btn" id="login-btn">Entrar</button> 
+        </form> 
+        
+        <div class="signup-link"> 
+            Não tem uma conta? <a href="../Cadastro/index.html">Cadastre-se</a> 
+        </div> 
+    </div> 
+    
+    <!-- Adicione o script aqui -->
+    <script src="../Login/script.js"></script>
+    
+    <!-- Script alternativo inline caso o externo não funcione -->
+    <script>
+        // Função de redirecionamento direto (caso o script externo falhe)
+        document.getElementById('login-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log("Clique direto no botão");
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            if (email && password) {
+                window.location.href = "../Dashboard/index.html";
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+                setTimeout(function() {
+                    document.getElementById('error-message').style.display = 'none';
+                }, 3000);
+            }
+        });
+    </script>
+</body> 
+</html>

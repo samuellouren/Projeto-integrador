@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vagas.css">
+    <title>TalentMatch | Vagas</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Talent<span>Match</span></div>
+                <div class="header-actions">
+                    <div style="position: relative;">
+                        📬
+                        <span class="notification-badge">3</span>
+                    </div>
+                    <div class="avatar">JD</div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Vagas -->
+        <div id="jobs" class="tab-content active">
+            <div class="page-header">
+                <h1>Vagas</h1>
+            </div>
+            
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <h3>TOTAL DE VAGAS</h3>
+                    <div class="stat-value">14</div>
+                    <div class="stat-change positive">+3 este mês</div>
+                </div>
+                <div class="stat-card">
+                    <h3>VAGAS ATIVAS</h3>
+                    <div class="stat-value">9</div>
+                    <div class="stat-change positive">+2 vagas</div>
+                </div>
+                <div class="stat-card">
+                    <h3>TAXA DE PREENCHIMENTO</h3>
+                    <div class="stat-value">78%</div>
+                    <div class="stat-change positive">+5%</div>
+                </div>
+                <div class="stat-card">
+                    <h3>CANDIDATOS/VAGA</h3>
+                    <div class="stat-value">24</div>
+                    <div class="stat-change positive">+8 candidatos</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2>Vagas Abertas</h2>
+                    <div class="filters">
+                        <select class="filter-select">
+                            <option>Todos os departamentos</option>
+                            <option>Tecnologia</option>
+                            <option>Marketing</option>
+                            <option>Produto</option>
+                            <option>Recursos Humanos</option>
+                        </select>
+                        <select class="filter-select">
+                            <option>Todos os status</option>
+                            <option>Ativa</option>
+                            <option>Pausada</option>
+                            <option>Encerrada</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Pesquisar vagas...">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="job-title">Desenvolvedor Full-stack</div>
+                            <div class="job-department">Tecnologia</div>
+                        </div>
+                        <div class="job-details">
+                            <div class="detail-item">
+                                <div class="label">Status</div>
+                                <span class="status status-active">Ativa</span>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Localização</div>
+                                <div>São Paulo (Híbrido)</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Candidatos</div>
+                                <div>42 aplicações</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Publicada</div>
+                                <div>12 Abr, 2025</div>
+                            </div>
+                        </div>
+                        <div class="job-progress">
+                            <div class="progress-label">
+                                <span>Progresso</span>
+                                <span>4/5 etapas</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="job-actions">
+                            <button class="action-btn">👥</button>
+                            <button class="action-btn">📝</button>
+                            <button class="action-btn">⏸️</button>
+                        </div>
+                    </div>
+                    
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="job-title">Product Manager</div>
+                            <div class="job-department">Produto</div>
+                        </div>
+                        <div class="job-details">
+                            <div class="detail-item">
+                                <div class="label">Status</div>
+                                <span class="status status-active">Ativa</span>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Localização</div>
+                                <div>Remoto</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Candidatos</div>
+                                <div>28 aplicações</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Publicada</div>
+                                <div>05 Abr, 2025</div>
+                            </div>
+                        </div>
+                        <div class="job-progress">
+                            <div class="progress-label">
+                                <span>Progresso</span>
+                                <span>3/5 etapas</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="job-actions">
+                            <button class="action-btn">👥</button>
+                            <button class="action-btn">📝</button>
+                            <button class="action-btn">⏸️</button>
+                        </div>
+                    </div>
+                    
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="job-title">UX Designer</div>
+                            <div class="job-department">Produto</div>
+                        </div>
+                        <div class="job-details">
+                            <div class="detail-item">
+                                <div class="label">Status</div>
+                                <span class="status status-paused">Pausada</span>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Localização</div>
+                                <div>Rio de Janeiro (Presencial)</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Candidatos</div>
+                                <div>15 aplicações</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Publicada</div>
+                                <div>20 Mar, 2025</div>
+                            </div>
+                        </div>
+                        <div class="job-progress">
+                            <div class="progress-label">
+                                <span>Progresso</span>
+                                <span>2/5 etapas</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 40%"></div>
+                            </div>
+                        </div>
+                        <div class="job-actions">
+                            <button class="action-btn">👥</button>
+                            <button class="action-btn">📝</button>
+                            <button class="action-btn">▶️</button>
+                        </div>
+                    </div>
+                    
+                    <div class="job-card">
+                        <div class="job-header">
+                            <div class="job-title">Analista de Marketing Digital</div>
+                            <div class="job-department">Marketing</div>
+                        </div>
+                        <div class="job-details">
+                            <div class="detail-item">
+                                <div class="label">Status</div>
+                                <span class="status status-active">Ativa</span>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Localização</div>
+                                <div>Remoto</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Candidatos</div>
+                                <div>32 aplicações</div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="label">Publicada</div>
+                                <div>15 Abr, 2025</div>
+                            </div>
+                        </div>
+                        <div class="job-progress">
+                            <div class="progress-label">
+                                <span>Progresso</span>
+                                <span>1/5 etapas</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 20%"></div>
+                            </div>
+                        </div>
+                        <div class="job-actions">
+                            <button class="action-btn">👥</button>
+                            <button class="action-btn">📝</button>
+                            <button class="action-btn">⏸️</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2>Vagas Recentes</h2>
+                </div>
+                <div class="card-body">
+                    <div class="recent-jobs">
+                        <div class="recent-job-item">
+                            <div class="recent-job-info">
+                                <div class="recent-job-title">Especialista em Dados</div>
+                                <div class="recent-job-department">Tecnologia</div>
+                            </div>
+                            <span class="status status-active">Ativa</span>
+                        </div>
+                        
+                        <div class="recent-job-item">
+                            <div class="recent-job-info">
+                                <div class="recent-job-title">Gerente de Recursos Humanos</div>
+                                <div class="recent-job-department">Recursos Humanos</div>
+                            </div>
+                            <span class="status status-active">Ativa</span>
+                        </div>
+                        
+                        <div class="recent-job-item">
+                            <div class="recent-job-info">
+                                <div class="recent-job-title">Desenvolvedor Mobile</div>
+                                <div class="recent-job-department">Tecnologia</div>
+                            </div>
+                            <span class="status status-closed">Encerrada</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <button class="floating-action-btn">+</button>
+    
+    <div class="bottom-nav">
+        <a href="../Dashboard/novo-dasbord.html" data-tab="dashboard">
+            📊<br>Dashboard
+        </a>
+        <a href="../candidatos/candidatos.html" data-tab="candidates">
+            👥<br>Candidatos
+        </a>
+        <a href="../vagas/vagas.html" class="active" data-tab="jobs">
+            💼<br>Vagas
+        </a>
+        <a href="../analises/analise.html" data-tab="analytics">
+            📈<br>Análises
+        </a>
+        <a href="../page-config/config.html" data-tab="settings">
+            ⚙️<br>Config
+        </a>
+    </div>
+    <script src="../Dashboard/script.js"></script>
+</body>
+</html>
