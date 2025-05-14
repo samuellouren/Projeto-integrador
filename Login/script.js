@@ -1,7 +1,7 @@
 // Função para redirecionar ao dashboard
 function redirectToDashboard() {
     console.log("Redirecionando para o dashboard...");
-    window.location.href = "../Dashboard/index.html";
+    window.location.href = "../Dashboard/novo-dasbord.html";
 }
 
 // Função para mostrar mensagem de erro
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             switch(targetTab) {
                 case 'dashboard':
-                    targetUrl = '/Dashboard/index.html';
+                    targetUrl = '/Dashboard/novo-dasbord.html';
                     break;
                 case 'candidates':
                     targetUrl = '/candidatos/candidatos.html';
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     targetUrl = '/analises/analises.html';
                     break;
                 case 'settings':
-                    targetUrl = '/configuracoes/configuracoes.html';
+                    targetUrl = '/page-config/config.html';
                     break;
                 default:
                     // Se nenhum caso corresponder, permanece na página atual
