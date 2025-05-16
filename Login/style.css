@@ -261,3 +261,13 @@
             max-width: none;
         }
     }
+    .error-message {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: white;
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
