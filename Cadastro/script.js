@@ -45,7 +45,7 @@
             const confirmPassword = document.getElementById('confirm-password').value;
             const terms = document.getElementById('terms').checked;
             
-            if (nome && email && telefone && password && confirmPassword && terms) {
+            if (nome && email && password && confirmPassword && terms) {
                 if (password === confirmPassword) {
                     // Simulação de um cadastro bem-sucedido
                     // Em um cenário real, você enviaria esses dados para um backend
