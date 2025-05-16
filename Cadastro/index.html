@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Cadastro - TalentMatch</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <div class="login-container">
-        <div class="login-header">
+    <div class="stars" id="stars"></div>
+    
+    <div class="cadastro-container">
+        <div class="cadastro-header">
             <div class="logo">
                 Talent<span>Match</span>
             </div>
@@ -16,11 +19,11 @@
             <p>Preencha os dados abaixo para se cadastrar</p>
         </div>
         
-        <div class="error-message" id="error-message" style="display: none; background-color: rgba(239, 68, 68, 0.1); color: var(--danger); padding: 0.8rem; border-radius: 8px; margin-bottom: 1.5rem; font-size: 0.9rem; text-align: center;">
+        <div class="error-message" id="error-message" style="display: none;">
             Por favor, preencha todos os campos corretamente.
         </div>
         
-        <form id="registerForm" action="confirmacao.html" method="post">
+        <form id="cadastro-form">
             <div class="form-group">
                 <label for="nome">Nome completo</label>
                 <div class="input-with-icon">
@@ -34,6 +37,14 @@
                 <div class="input-with-icon">
                     <i class="icon fas fa-envelope"></i>
                     <input type="email" id="email" name="email" placeholder="Seu email" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <div class="input-with-icon">
+                    <i class="icon fas fa-phone"></i>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
                 </div>
             </div>
             
@@ -53,19 +64,16 @@
                 </div>
             </div>
             
-            <div class="remember-forgot">
-                <div class="checkbox-container">
-                    <input type="checkbox" id="terms" name="terms" required>
-                    <label for="terms">Concordo com os <a href="#">Termos de Uso</a></label>
-                </div>
+            <div class="terms-container">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">Concordo com os <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a> do TalentMatch</label>
             </div>
             
-            <!-- Aqui precisa de um javascript que redirecione o caba pra página de login eeeeee que salve os dados cadastrados com a API -->
-            <button type="submit" class="btn" id="register-btn">Cadastrar</button>
+            <button type="submit" class="btn" id="cadastrar-btn">Criar conta</button>
         </form>
         
-        <div class="signup-link">
-            Já tem uma conta? <a href="../Login/index.html">Faça login</a>
+        <div class="login-link">
+            Já tem uma conta? <a href="#">Faça login</a>
         </div>
     </div>
     <script src="script.js"></script>

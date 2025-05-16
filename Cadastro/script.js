@@ -1,143 +1,91 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('registerForm');
-    const errorMessage = document.getElementById('error-message');
-    const emailInput = document.getElementById('email');
-    const passwordInput = document.getElementById('password');
-    const confirmPasswordInput = document.getElementById('confirm-password');
-    const nomeInput = document.getElementById('nome');
-    const registerBtn = document.getElementById('register-btn');
-
-    // Função para verificar força da senha
-    function checkPasswordStrength(password) {
-        const minLength = 8;
-        const hasUppercase = /[A-Z]/.test(password);
-        const hasLowercase = /[a-z]/.test(password);
-        const hasNumbers = /[0-9]/.test(password);
-        const hasSpecial = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
-        
-        if (password.length < minLength) {
-            return 'fraca';
-        }
-        
-        let strength = 0;
-        if (hasUppercase) strength++;
-        if (hasLowercase) strength++;
-        if (hasNumbers) strength++;
-        if (hasSpecial) strength++;
-        
-        if (strength <= 2) return 'fraca';
-        if (strength === 3) return 'média';
-        return 'forte';
-    }
-
-    // Validação de email
-    function isValidEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-    }
-
-    // Função para exibir erro
-    function showError(message) {
-        errorMessage.textContent = message;
-        errorMessage.style.display = 'block';
-        
-        // Esconde a mensagem de erro após 5 segundos
-        setTimeout(() => {
-            errorMessage.style.display = 'none';
-        }, 5000);
-    }
-
-    // Função para validar o formulário
-    function validateForm() {
-        // Validações básicas
-        if (!nomeInput.value.trim()) {
-            showError('Por favor, insira seu nome completo.');
-            return false;
-        }
-
-        if (!emailInput.value.trim()) {
-            showError('Por favor, insira seu email.');
-            return false;
-        }
-
-        if (!isValidEmail(emailInput.value.trim())) {
-            showError('Por favor, insira um email válido.');
-            return false;
-        }
-
-        if (!passwordInput.value) {
-            showError('Por favor, insira sua senha.');
-            return false;
-        }
-
-        const passwordStrength = checkPasswordStrength(passwordInput.value);
-        if (passwordStrength === 'fraca') {
-            showError('Sua senha é muito fraca. Use pelo menos 8 caracteres, incluindo letras maiúsculas, minúsculas, números e símbolos.');
-            return false;
-        }
-
-        if (passwordInput.value !== confirmPasswordInput.value) {
-            showError('As senhas não coincidem.');
-            return false;
-        }
-
-        if (!document.getElementById('terms').checked) {
-            showError('Você precisa concordar com os Termos de Uso.');
-            return false;
-        }
-
-        return true;
-    }
-
-    // Adicionar feedback visual aos campos conforme são preenchidos
-    const inputs = [nomeInput, emailInput, passwordInput, confirmPasswordInput];
-    
-    inputs.forEach(input => {
-        input.addEventListener('blur', function() {
-            const parent = this.parentElement;
+// Create stars
+        function createStars() {
+            const stars = document.getElementById('stars');
+            const starCount = 200;
             
-            // Remover classes anteriores
-            parent.classList.remove('valid', 'error');
-            
-            // Validar campo específico
-            if (this.value.trim() === '') {
-                parent.classList.add('error');
-            } else if (this.id === 'email' && !isValidEmail(this.value)) {
-                parent.classList.add('error');
-            } else if (this.id === 'password' && checkPasswordStrength(this.value) === 'fraca') {
-                parent.classList.add('error');
-            } else if (this.id === 'confirm-password' && this.value !== passwordInput.value) {
-                parent.classList.add('error');
-            } else {
-                parent.classList.add('valid');
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                // Random position
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                
+                // Random size (1-3px)
+                const size = Math.random() * 2 + 1;
+                
+                // Random duration (3-8s)
+                const duration = Math.random() * 5 + 3;
+                
+                // Random delay
+                const delay = Math.random() * 8;
+                
+                star.style.left = `${x}%`;
+                star.style.top = `${y}%`;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.setProperty('--duration', `${duration}s`);
+                star.style.animationDelay = `${delay}s`;
+                
+                stars.appendChild(star);
             }
-        });
-    });
-
-    // Envio do formulário
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        if (validateForm()) {
-            // Simular API - Armazenar no localStorage
-            const userData = {
-                nome: nomeInput.value.trim(),
-                email: emailInput.value.trim(),
-                password: passwordInput.value // Em uma aplicação real, nunca armazene senhas em texto puro
-            };
-            
-            // Salvar dados do usuário (simulação)
-            localStorage.setItem('userData', JSON.stringify(userData));
-            
-            // Mudar texto do botão para indicar progresso
-            registerBtn.innerHTML = 'Cadastrando... <i class="fas fa-spinner fa-spin"></i>';
-            registerBtn.disabled = true;
-            
-            // Simular tempo de resposta da API
-            setTimeout(() => {
-                // Redirecionar para página de confirmação
-                window.location.href = "confirmacao.html";
-            }, 1500);
         }
-    });
-});
+        
+        // Initialize stars on page load
+        window.addEventListener('load', createStars);
+        
+        // Cadastro functionality
+        document.getElementById('cadastrar-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const terms = document.getElementById('terms').checked;
+            
+            if (nome && email && telefone && password && confirmPassword && terms) {
+                if (password === confirmPassword) {
+                    // Simulação de um cadastro bem-sucedido
+                    // Em um cenário real, você enviaria esses dados para um backend
+                    alert('Cadastro realizado com sucesso!');
+                    // Redirecionar para a página de login ou dashboard
+                    // window.location.href = "login.html";
+                } else {
+                    document.getElementById('error-message').textContent = 'As senhas não coincidem.';
+                    document.getElementById('error-message').style.display = 'block';
+                }
+            } else {
+                document.getElementById('error-message').textContent = 'Por favor, preencha todos os campos corretamente.';
+                document.getElementById('error-message').style.display = 'block';
+            }
+            
+            // Ocultar a mensagem de erro após 3 segundos
+            setTimeout(function() {
+                document.getElementById('error-message').style.display = 'none';
+            }, 3000);
+        });
+        
+        // Máscara para o campo de telefone
+        document.getElementById('telefone').addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+            
+            if (value.length > 0) {
+                value = '(' + value;
+                
+                if (value.length > 3) {
+                    value = value.substring(0, 3) + ') ' + value.substring(3);
+                }
+                
+                if (value.length > 10) {
+                    value = value.substring(0, 10) + '-' + value.substring(10);
+                }
+                
+                if (value.length > 15) {
+                    value = value.substring(0, 15);
+                }
+            }
+            
+            e.target.value = value;
+        });

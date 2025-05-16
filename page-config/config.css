@@ -90,8 +90,8 @@ nav {
 .avatar {
     width: 40px;
     height: 40px;
-    background-color: var(--gray-300);
-    color: var(--gray-800);
+    background-color: var(--gray-200);
+    color: var(--dark);
     border-radius: 50%;
     display: flex;
     align-items: center;

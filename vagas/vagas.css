@@ -26,7 +26,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  font-family: 'Poppins', 'Roboto', sans-serif;
 }
 
 body {
@@ -38,22 +38,25 @@ body {
 }
 
 .container {
+  background-color: var(--primary);
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 0 15px;
 }
 
 /* Header Styles */
 header {
   background-color: var(--primary);
+  width: 100%;
+  justify-content: space-between;
   box-shadow: var(--shadow);
   position: sticky;
   top: 0;
   z-index: 100;
+  padding: 0 1rem;
 }
 
 nav {
+  background-color: var(--primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -393,7 +396,7 @@ main {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background-color: var(--primary-color);
+  background-color: var(--primary);
   color: white;
   font-size: 24px;
   border: none;

@@ -1,66 +1,101 @@
-<!DOCTYPE html> 
-<html lang="pt-BR"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Login</title> 
-    <link rel="stylesheet" href="../Login/style.css"> 
-</head> 
-<body> 
-    <div class="login-container"> 
-        <div class="login-header"> 
-            <div class="logo"> 
-                Talent<span>Match</span> 
-            </div> 
-            <h1>Bem-vindo de volta</h1> 
-            <p>Entre com seus dados para acessar sua conta</p> 
-        </div> 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <div class="login-container">
+        <div class="login-header">
+            <div class="logo">
+                Talent<span>Match</span>
+            </div>
+            <h1>Bem-vindo de volta</h1>
+            <p>Entre com seus dados para acessar sua conta</p>
+        </div>
         
-        <div class="error-message" id="error-message" style="display: none; background-color: rgba(239, 68, 68, 0.1); color: var(--danger); padding: 0.8rem; border-radius: 8px; margin-bottom: 1.5rem; font-size: 0.9rem; text-align: center;"> 
-            Por favor, insira um email e senha válidos. 
-        </div> 
+        <div class="error-message" id="error-message" style="display: none; background-color: rgba(245, 33, 33, 0.938); color: var(--danger); padding: 0.8rem; border-radius: 8px; margin-bottom: 1.5rem; font-size: 0.9rem; text-align: center;">
+            Por favor, insira um email e senha válidos.
+        </div>
         
         <form id="login-form">
-            <div class="form-group"> 
-                <label for="email">Email</label> 
-                <div class="input-with-icon"> 
-                    <i class="icon fas fa-envelope"></i> 
-                    <input type="email" id="email" name="email" placeholder="Seu email" required> 
-                </div> 
-            </div> 
+            <div class="form-group">
+                <label for="email">Email</label>
+                <div class="input-with-icon">
+                    <i class="icon fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" placeholder="Seu email" required>
+                </div>
+            </div>
             
-            <div class="form-group"> 
-                <label for="password">Senha</label> 
-                <div class="input-with-icon"> 
-                    <i class="icon fas fa-lock"></i> 
-                    <input type="password" id="password" name="password" placeholder="Sua senha" required> 
-                </div> 
-            </div> 
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <div class="input-with-icon">
+                    <i class="icon fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Sua senha" required>
+                </div>
+            </div>
             
-            <div class="remember-forgot"> 
-                <div class="checkbox-container"> 
-                    <input type="checkbox" id="remember" name="remember"> 
-                    <label for="remember">Lembrar-me</label> 
-                </div> 
-            </div> 
+            <div class="remember-forgot">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Lembrar-me</label>
+                </div>
+            </div>
             
-            <button type="submit" class="btn" id="login-btn">Entrar</button> 
-        </form> 
+            <button type="submit" class="btn" id="login-btn">Entrar</button>
+        </form>
         
-        <div class="signup-link"> 
-            Não tem uma conta? <a href="../Cadastro/index.html">Cadastre-se</a> 
-        </div> 
-    </div> 
+        <div class="signup-link">
+            Não tem uma conta? <a href="../Cadastro/index.html">Cadastre-se</a>
+        </div>
+    </div>
     
-    <!-- Adicione o script aqui -->
-    <script src="../Login/script.js"></script>
-    
-    <!-- Script alternativo inline caso o externo não funcione -->
     <script>
-        // Função de redirecionamento direto (caso o script externo falhe)
+        // Create stars
+        function createStars() {
+            const stars = document.getElementById('stars');
+            const starCount = 200;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                // Random position
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                
+                // Random size (1-3px)
+                const size = Math.random() * 2 + 1;
+                
+                // Random duration (3-8s)
+                const duration = Math.random() * 5 + 3;
+                
+                // Random delay
+                const delay = Math.random() * 8;
+                
+                star.style.left = `${x}%`;
+                star.style.top = `${y}%`;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.setProperty('--duration', `${duration}s`);
+                star.style.animationDelay = `${delay}s`;
+                
+                stars.appendChild(star);
+            }
+        }
+        
+        // Initialize stars on page load
+        window.addEventListener('load', createStars);
+        
+        // Login functionality
         document.getElementById('login-btn').addEventListener('click', function(e) {
             e.preventDefault();
-            console.log("Clique direto no botão");
+            console.log("Clique no botão");
             
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
@@ -75,5 +110,5 @@
             }
         });
     </script>
-</body> 
+</body>
 </html>
