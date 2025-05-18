@@ -165,3 +165,8 @@ function getCurrentPage() {
     
     return 'unknown';
 }
+
+document.getElementById("astronaut").addEventListener("click", () => {
+    const speech = document.getElementById("speech");
+    speech.style.display = speech.style.display === "block" ? "none" : "block";
+});
