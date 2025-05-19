@@ -77,7 +77,7 @@
     }
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .astronaut-container {
         top: 20px;
@@ -99,13 +99,11 @@
     }
 }
 
-/* Enhancement for form inputs to add some space animation */
+
 .input-with-icon input:focus {
     box-shadow: 0 0 0 2px rgba(76, 201, 240, 0.3);
     border-color: var(--accent);
 }
-
-/* Add a shooting star animation */
 .shooting-star {
     position: absolute;
     width: 4px;
@@ -169,7 +167,7 @@ body {
     position: relative;
 }
 
-/* Starry Background */
+
 .stars {
     position: fixed;
     top: 0;
