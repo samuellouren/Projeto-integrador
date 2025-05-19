@@ -177,8 +177,6 @@ function addFormEventListeners() {
         // Simulating successful registration
         setTimeout(() => {
             // Redirect or show success message
-            alert("Cadastro realizado com sucesso!");
-            // window.location.href = "../Login/index.html"; // Uncomment to redirect
         }, 1500);
     });
     
