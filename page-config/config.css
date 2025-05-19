@@ -28,10 +28,11 @@ body {
     color: #333;
     line-height: 1.6;
     min-height: 100vh;
-    padding-bottom: 70px; 
+    padding-bottom: 70px; /* Espaço para navegação inferior */
     position: relative;
 }
 
+/* ===== HEADER ===== */
 header {
     background-color: #4a6cf7;
     color: white;
@@ -99,6 +100,7 @@ nav {
     cursor: pointer;
 }
 
+/* ===== MAIN CONTENT ===== */
 main {
     width: 95%;
     max-width: 1200px;
@@ -123,7 +125,7 @@ main {
     color: #333;
 }
 
-
+/* ===== CARDS ===== */
 .card {
     background-color: white;
     border-radius: 10px;
@@ -147,7 +149,7 @@ main {
     padding: 1rem 1.5rem;
 }
 
-
+/* ===== SETTINGS PROFILE ===== */
 .settings-profile {
     display: flex;
     align-items: center;
@@ -197,13 +199,14 @@ main {
     background-color: #3a5bd9;
 }
 
-
+/* ===== SETTINGS DIVIDER ===== */
 .settings-divider {
     height: 1px;
     background-color: #eaecef;
     margin: 1rem 0;
 }
 
+/* ===== SETTINGS SECTIONS ===== */
 .settings-section {
     margin-bottom: 1rem;
 }
@@ -214,6 +217,7 @@ main {
     color: #4a5568;
 }
 
+/* ===== SETTINGS ITEMS ===== */
 .settings-item {
     display: flex;
     justify-content: space-between;
@@ -253,7 +257,7 @@ main {
     background-color: #e5e7eb;
 }
 
-
+/* ===== TOGGLE SWITCHES ===== */
 .settings-toggle-item {
     display: flex;
     justify-content: space-between;
@@ -322,6 +326,7 @@ input:checked + .toggle-slider:before {
     transform: translateX(24px);
 }
 
+/* ===== DANGER ZONE ===== */
 .danger-zone .card-header {
     background-color: #fff7f7;
 }
@@ -346,7 +351,7 @@ input:checked + .toggle-slider:before {
     color: white;
 }
 
-
+/* ===== SETTINGS FOOTER ===== */
 .settings-footer {
     text-align: center;
     color: #9ca3af;
@@ -354,7 +359,7 @@ input:checked + .toggle-slider:before {
     margin: 2rem 0;
 }
 
-
+/* ===== BOTTOM NAVIGATION ===== */
 .bottom-nav {
     background-color: white;
     position: fixed;
@@ -386,7 +391,7 @@ input:checked + .toggle-slider:before {
     font-weight: 500;
 }
 
-
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
     .settings-profile {
         flex-direction: column;
@@ -447,7 +452,7 @@ input:checked + .toggle-slider:before {
     }
 }
 
-
+/* ===== DARK MODE ===== */
 body.dark-mode {
     background-color: #1a202c;
     color: #e2e8f0;

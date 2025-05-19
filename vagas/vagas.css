@@ -43,7 +43,7 @@ body {
   padding: 0 15px;
 }
 
-
+/* Header Styles */
 header {
   background-color: var(--primary);
   width: 100%;
@@ -106,7 +106,7 @@ nav {
   font-weight: 500;
 }
 
-
+/* Main Content */
 main {
   padding: 20px 15px;
   max-width: 1200px;
@@ -123,7 +123,7 @@ main {
   color: var(--text-color);
 }
 
-
+/* Dashboard Stats */
 .dashboard-stats {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -171,7 +171,7 @@ main {
   color: var(--accent-color);
 }
 
-
+/* Cards */
 .card {
   background-color: var(--white);
   border-radius: var(--border-radius);
@@ -197,7 +197,7 @@ main {
   padding: 20px;
 }
 
-
+/* Filters */
 .filters {
   display: flex;
   gap: 10px;
@@ -214,6 +214,7 @@ main {
   outline: none;
 }
 
+/* Search */
 .search-container {
   position: relative;
   margin-bottom: 20px;
@@ -242,7 +243,7 @@ main {
   color: var(--dark-gray);
 }
 
-
+/* Job Cards */
 .job-card {
   border: 1px solid var(--medium-gray);
   border-radius: var(--border-radius);
@@ -356,7 +357,7 @@ main {
   background-color: var(--light-gray);
 }
 
-
+/* Recent Jobs */
 .recent-jobs {
   display: flex;
   flex-direction: column;
@@ -387,7 +388,7 @@ main {
   color: var(--dark-gray);
 }
 
-
+/* Floating Action Button */
 .floating-action-btn {
   position: fixed;
   right: 25px;
@@ -414,7 +415,7 @@ main {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
-
+/* Bottom Navigation */
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -449,7 +450,7 @@ main {
   background-color: rgba(52, 152, 219, 0.05);
 }
 
-
+/* Tab Content */
 .tab-content {
   display: none;
 }
@@ -458,7 +459,7 @@ main {
   display: block;
 }
 
-
+/* Responsive Styles */
 @media (max-width: 768px) {
   .dashboard-stats {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
