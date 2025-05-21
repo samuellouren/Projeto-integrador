@@ -94,9 +94,10 @@ document.getElementById("cadastro-form").addEventListener("submit", async functi
 
     if (response.ok) {
   showMessage("Cadastro realizado com sucesso! Redirecionando...", false);
+
   setTimeout(() => {
     window.location.href = "../Login/index.html";
-  }, 1500);
+  }, 2000);
 }
 
  else {
